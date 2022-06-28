@@ -90,7 +90,7 @@ function verificarBinario(num){
 inicio: while(true) {
     console.clear()
     console.log("===| NÚMEROS BINÁRIOS |===\n")
-    console.log("[1]CODIFICAR \n[2]DECODIFICAR \n[3]APRENDER \n[4]SAIR")
+    console.log("[1]CODIFICAR \n[2]DECODIFICAR \n[3]APRENDER \n[4]SAIR\n")
     acao = +prompt("Resposta: ")
     codificar: while(acao == 1) {
         console.clear()
@@ -128,24 +128,56 @@ inicio: while(true) {
     }
     aprender: while(acao == 3) {
         console.clear()
+        console.log("Imagine a seguinte sequência de números:")
+        console.log([1,2,4,8,16])
+        prompt("[ENTER]")
+        console.log("\nEssa sequência representa a potência do número 2. Agora ao contrário:")
+        console.log([16,8,4,2,1])
+        prompt("[ENTER]")
+        console.log("\nSendo os números binários formados apenas por 0 e 1, vamos verificar o número que estamos querendo converter e, utilizando a potência de 2, verificar se esse número possui (1) ou não (0) os números da potência em sua constituição.")
+        prompt("[ENTER]")
+        console.log("\nPor exemplo: o número 7 em binário seria 111, pois possui em sua constituição os seguintes números:")
+        console.log([4,2,1])
+        prompt("[ENTER]")
+        console.log("\nOutro exemplo: o número 50 em binário seria 110010, pois possui em sua constituição os seguintes números:")
+        console.log([32,16,2])
+        prompt("[ENTER]")
+        console.log('\nOs dígitos "0" servem para indicar os números da sequência que não são usados(1,4 e 8):')
+        console.log([32,16,8,4,2,1])
+        console.log([1,1,0,0,1,0])
+        prompt("[ENTER]")
+        console.clear()
         const conversao = [
-            {Decimal: 0, Binário: 0},
-            {Decimal: 1, Binário: 1},
-            {Decimal: 2, Binário: 10},
-            {Decimal: 3, Binário: 11},
-            {Decimal: 5, Binário: 101},
-            {Decimal: 10, Binário: 1010},
-            {Decimal: 15, Binário: 1111},
-            {Decimal: 27, Binário: 11011},
-            {Decimal: 53, Binário: 110101},
-            {Decimal: 72, Binário: 1001000}
+            {Binário: 0},
+            {Binário: 1},
+            {Binário: 10},
+            {Binário: 11},
+            {Binário: 100},
+            {Binário: 101},
+            {Binário: 110},
+            {Binário: 111},
+            {Binário: 1000},
+            {Binário: 1001},
+            {Binário: 1010}
         ]
         console.log("\nEXEMPLOS:")
         console.table(conversao)
         prompt("[ENTER]")
-        break
+        console.log("\nGostaria de ler novamente? [1]SIM [2]NÃO")
+        let continuar = +prompt("Resposta: ")
+        while (continuar != 1 && continuar != 2) {
+            console.log("\nDIGITE APENAS 1 OU 2.")
+            console.log("\nGostaria de ler novamente? [1]SIM [2]NÃO")
+            continuar = +prompt("Resposta: ")
+        }
+        if (continuar == 1) {
+            continue aprender
+        } else {break}
     }
     if(acao == 4) {
         break inicio
     }
 }
+
+//Criado por Douglas Volcato
+//Github: https://github.com/DouglasVolcato
