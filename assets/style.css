@@ -1,0 +1,37 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body,html{
+    background-color: black;
+    color: white;
+    padding: 4vw;
+}
+h1{
+    font-size: 4.5vw;
+    margin-bottom: 5vw;
+}
+h2{
+    font-size: 3vw;
+}
+button{
+    background-color: wheat;
+    color: black;
+    padding: 0.3vw;
+    font-size: 1.7vw;
+}
+button:hover{
+    background-color: aqua;
+}
+input{
+    font-size: 1.7vw;
+    background-color: white;
+    color: black;
+}
+form{
+    margin: 5vw;
+}
+p{
+    font-size: 2vw;
+}
